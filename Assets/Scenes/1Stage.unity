@@ -1773,6 +1773,7 @@ GameObject:
   - component: {fileID: 1310134504}
   - component: {fileID: 1310134503}
   - component: {fileID: 1310134506}
+  - component: {fileID: 1310134507}
   m_Layer: 0
   m_Name: AIEnemy
   m_TagString: Untagged
@@ -1852,6 +1853,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1975625822}
+  attackCoolTime: 2
+--- !u!114 &1310134507
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1310134502}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88f19d0825e6fc647840b95a4a6a8171, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHp: 0
+  currentHp: 0
+  attackDamage: 0
+  Hpslider: {fileID: 0}
 --- !u!1 &1452579654
 GameObject:
   m_ObjectHideFlags: 0

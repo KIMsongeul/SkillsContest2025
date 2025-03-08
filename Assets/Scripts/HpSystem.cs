@@ -31,7 +31,7 @@ public class HpSystem : MonoBehaviour
         if (currentHp <= 0)
         {
             Debug.Log("Died");
-            Destroy(gameObject);
+            //Destroy(gameObject);
         }
     }
 }
