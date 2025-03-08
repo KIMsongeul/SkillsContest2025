@@ -26,6 +26,9 @@ public class CamControl : MonoBehaviour
         yrot += mouseX;
 
         xrot = Mathf.Clamp(xrot, -70f, 70f);
+        
+        //보통 회전을 표현할때 Quaternion을 사용함
+        //Quaternion.Euler 함수는 각도를 쿼터니언으로 변환해줌
         cam.transform.rotation = Quaternion.Euler(xrot,yrot,0);
         target.transform.rotation = Quaternion.Euler(0, yrot, 0);
     }

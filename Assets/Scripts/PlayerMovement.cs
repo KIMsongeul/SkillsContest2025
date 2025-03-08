@@ -9,6 +9,7 @@ public class PlayerMovement : MonoBehaviour
     public float jumpForce;
     
     private Vector3 movement;
+    private int jumpCnt = 0;
     
     private Rigidbody rigid;
 
@@ -24,10 +25,12 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) && jumpCnt < 1)
         {
             Jump();
+            jumpCnt++;
         }
+        //점프 후 빨리 떨어지게 하기 위한 코드
         Physics.gravity = new Vector3(0,-50f,0);
     }
 
@@ -35,6 +38,8 @@ public class PlayerMovement : MonoBehaviour
     {
         float h = Input.GetAxis("Horizontal");
         float v = Input.GetAxis("Vertical");
+        
+        //커서로 플레이어 방향을 돌려도 앞뒤좌우 이동이 되게 하는 코드
         movement = transform.forward * v + transform.right * h;
         transform.position += movement * speed * Time.deltaTime;
     }
@@ -42,5 +47,13 @@ public class PlayerMovement : MonoBehaviour
     void Jump()
     {
         rigid.AddForce(Vector3.up * jumpForce,ForceMode.Impulse);
+    }
+
+    private void OnCollisionEnter(Collision other)
+    {
+        if (other.gameObject.CompareTag("AbleWalk"))
+        {
+            jumpCnt = 0;
+        }
     }
 }
