@@ -437,9 +437,9 @@ MonoBehaviour:
   m_HandleRect: {fileID: 0}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 100
+  m_MaxValue: 500
   m_WholeNumbers: 0
-  m_Value: 100
+  m_Value: 96
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -2613,6 +2613,19 @@ MonoBehaviour:
   currentHp: 0
   attackDamage: 0
   Hpslider: {fileID: 636391456}
+--- !u!114 &1975625827
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1975625821}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0795088cabcbea5459da00849fc76715, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  O2Slider: {fileID: 403805624}
 --- !u!4 &2011610829 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8507749747442162918, guid: d567421bc87f34348a77fdfbad09ee19, type: 3}
@@ -2977,6 +2990,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2260274854287770199, guid: d567421bc87f34348a77fdfbad09ee19, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1975625826}
+    - targetCorrespondingSourceObject: {fileID: 2260274854287770199, guid: d567421bc87f34348a77fdfbad09ee19, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1975625827}
   m_SourcePrefab: {fileID: 100100000, guid: d567421bc87f34348a77fdfbad09ee19, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
