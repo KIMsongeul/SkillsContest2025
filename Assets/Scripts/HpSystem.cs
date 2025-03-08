@@ -8,7 +8,6 @@ public class HpSystem : MonoBehaviour
 {
     public int maxHp;
     public int currentHp;
-    public int attackDamage;
     public Slider Hpslider;
 
     private void Start()
@@ -31,6 +30,7 @@ public class HpSystem : MonoBehaviour
         if (currentHp <= 0)
         {
             Debug.Log("Died");
+            gameObject.SetActive(false);
             //Destroy(gameObject);
         }
     }

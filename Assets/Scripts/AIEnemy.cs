@@ -41,7 +41,7 @@ public class AIEnemy : MonoBehaviour
         else if (distancePlayer < detectionRange)
         {
             nav.SetDestination(player.position);
-            Debug.Log("Following Player");
+            //Debug.Log("Following Player");
         }
     }
 
@@ -49,7 +49,7 @@ public class AIEnemy : MonoBehaviour
     {
         if (Time.time - lastAttackTime >= attackCoolTime)
         {
-            Debug.Log("Attack Player");
+            //Debug.Log("Attack Player");
             playerHpSystem.Damage(damage);
             lastAttackTime = Time.time;
         }
