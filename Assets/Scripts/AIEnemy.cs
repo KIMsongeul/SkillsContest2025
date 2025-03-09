@@ -6,7 +6,7 @@ using UnityEngine.AI;
 public class AIEnemy : MonoBehaviour
 {
     public Transform player;
-    private float detectionRange = 10f;
+    private float detectionRange = 15f;
     private float attackRange = 2.5f;
     private int damage = 10;
 
@@ -15,13 +15,11 @@ public class AIEnemy : MonoBehaviour
 
 
     private NavMeshAgent nav;
-    private HpSystem hpSystem;
     private HpSystem playerHpSystem;
 
     private void Start()
     {
         nav = GetComponent<NavMeshAgent>();
-        hpSystem = GetComponent<HpSystem>();
         playerHpSystem = player.GetComponent<HpSystem>();
     }
 
