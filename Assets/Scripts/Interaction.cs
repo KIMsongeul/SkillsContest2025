@@ -12,7 +12,6 @@ public class Interaction : MonoBehaviour
     {
         puzzle,
         treasure,
-        
     }
 
     private void Start()

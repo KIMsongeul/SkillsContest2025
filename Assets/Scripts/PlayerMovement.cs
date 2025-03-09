@@ -12,6 +12,10 @@ public class PlayerMovement : MonoBehaviour
     private int jumpCnt = 0;
     
     private Rigidbody rigid;
+    private void Awake()
+    {
+        
+    }
 
     private void Start()
     {
